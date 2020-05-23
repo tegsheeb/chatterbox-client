@@ -12,6 +12,16 @@ var FormView = {
     // missing click functionality
     // submitting message (creating message & post to server)
     // POST request (ajax)
+    var userInput = $('#message').val();
+    var userMessage = {
+      text: userInput,
+      username: App.username,
+      roomname: 'testRoom'
+    };
+      // POST request
+    console.log(userMessage, 'line 18');
+    Parse.create(userMessage);
+    console.log(userMessage, 'line 18');
     console.log('click!');
   },
 

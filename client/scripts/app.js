@@ -17,18 +17,18 @@ var App = {
 
   },
 
-  fetch: function(callback = ()=>{}) {
+  fetch: function(callback = () => {}) {
     // GET request
-    var dataForUs = [];
-    Parse.readAll((data) => {
+    Parse.readAll((data100) => {
       // examine the response from the server request:
       // shows ALL data
-      console.log(data, 'line 25'); // data works
-      // dataForUs = data.map(row => row.slice());
-      data;
-      // return data;
+      console.log('line 25');
+      console.log(data100, 'line 26');
+      // // dataForUs = data.map(row => row.slice());
+      // data is the successCB
+      MessagesView.renderAllMessages(data100);
+      callback(data100);
     });
-    // return data;
   },
 
   startSpinner: function() {
