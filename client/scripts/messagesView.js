@@ -10,16 +10,13 @@ var MessagesView = {
 
   initialize: function() {
     // MessagesView.$form.on('chats', MessagesView.render);
-    console.log('line 8')
+    console.log('line 8');
     // var test = App.fetch(App.stopSpinner);
-    // console.log(test, 'line 9');
     Messages.initialize();
   },
 
   renderMessage: function(message) {
-    console.log(message, 'line 12');
     // TODO: needs submit button
-    // Tegshee: we already have submit button on formView
     // for (var i = 0; i < message.length; i++) {
     $('#chats').append(MessageView.render(message));
     // $.getJSON('app.js', function(results) {
@@ -35,7 +32,6 @@ var MessagesView = {
       // check for text property
       if (realData[i].text !== undefined) {
         var message = realData[i];
-        console.log(realData[i], 'line 34');
         MessagesView.renderMessage(message);
       }
       // call renderMessage on each message

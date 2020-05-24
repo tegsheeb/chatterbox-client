@@ -27,6 +27,7 @@ var App = {
       // // dataForUs = data.map(row => row.slice());
       // data is the successCB
       MessagesView.renderAllMessages(data100);
+      RoomsView.renderRoom(data100);
       callback(data100);
     });
   },
